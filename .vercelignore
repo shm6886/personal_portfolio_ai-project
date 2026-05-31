@@ -1,0 +1,6 @@
+# Ignore pyproject.toml for pip install
+# Vercel should only use api/requirements.txt
+pyproject.toml
+
+# Files starting with underscore are ignored by Vercel
+# (e.g., api/_index_bkp_v1.py, api/lib/_utils.py)

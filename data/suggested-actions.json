@@ -1,0 +1,22 @@
+[
+  {
+    "title": "👤 About Me",
+    "label": "Understanding John's background",
+    "action": "Tell me about John's professional background."
+  },
+  {
+    "title": "💼 Work Experience",
+    "label": "Career history and key roles",
+    "action": "Walk me through John's work experience."
+  },
+  {
+    "title": "🤖 AI Expertise",
+    "label": "AI Applications",
+    "action": "What AI application has John built?"
+  },
+  {
+    "title": "🔧 Technical Skills",
+    "label": "Technologies and certifications",
+    "action": "What technologies does John specialize in?"
+  }
+]

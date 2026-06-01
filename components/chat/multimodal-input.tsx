@@ -106,42 +106,26 @@ export function MultimodalInput({
       {/* Suggested Questions */}
       {messages.length === 0 && (
         <div className="flex flex-col gap-3">
-          <div className="border-2 border-black dark:border-white p-3 bg-white dark:bg-black">
-            <p className="font-display text-sm text-black dark:text-white text-center uppercase tracking-wider">
-              ASK ME DIRECTLY OR CLICK A SUGGESTION
-            </p>
-          </div>
-
-          <div className="max-h-[320px] sm:max-h-[280px] overflow-y-auto">
-            <div className="grid sm:grid-cols-2 gap-2 w-full pr-1">
-              {suggestedActions.map((suggestedAction, index) => (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ delay: 0.05 * index }}
-                  key={`suggested-action-${suggestedAction.title}-${index}`}
-                >
-                  <Button
-                    variant="ghost"
-                    onClick={async () => {
-                      append({
-                        role: "user",
-                        content: suggestedAction.action,
-                      });
-                    }}
-                    className="group text-left border-2 border-black dark:border-white bg-white dark:bg-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black px-4 py-3 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start transition-all cursor-pointer rounded-none"
-                  >
-                    <span className="font-display text-sm uppercase tracking-wider">
-                      {suggestedAction.title}
-                    </span>
-                    <span className="text-xs text-gray-600 dark:text-gray-400 group-hover:text-current leading-snug transition-colors normal-case">
-                      {suggestedAction.label}
-                    </span>
-                  </Button>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid sm:grid-cols-2 gap-2 w-full">
+            {suggestedActions.map((suggestedAction, index) => (
+              <motion.button
+                key={`suggested-action-${index}`}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.08 * index, type: "spring", stiffness: 280 }}
+                whileHover={{ scale: 1.02, y: -3, boxShadow: "0 8px 24px rgba(0,0,0,0.08)" }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => append({ role: "user", content: suggestedAction.action })}
+                className="group text-left border border-muted/40 bg-secondary hover:border-accent/40 hover:bg-accent/5 px-4 py-3.5 rounded-2xl w-full transition-all cursor-pointer"
+              >
+                <span className="font-display text-sm text-foreground block mb-0.5">
+                  {suggestedAction.title}
+                </span>
+                <span className="text-xs text-muted-foreground group-hover:text-foreground/70 leading-snug transition-colors">
+                  {suggestedAction.label}
+                </span>
+              </motion.button>
+            ))}
           </div>
         </div>
       )}
@@ -155,9 +139,9 @@ export function MultimodalInput({
           onChange={handleInput}
           className={cn(
             "min-h-[24px] max-h-[calc(75dvh)] overflow-hidden resize-none !text-base",
-            "bg-white dark:bg-black border-2 border-black dark:border-white rounded-none",
-            "focus:border-accent focus:ring-accent focus:ring-2",
-            "text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 placeholder:uppercase placeholder:tracking-wider",
+            "bg-secondary border border-muted/40 rounded-2xl",
+            "focus:border-accent/60 focus:ring-1 focus:ring-accent/40",
+            "text-foreground placeholder:text-muted-foreground placeholder:uppercase placeholder:tracking-wider",
             "pr-12",
             className,
           )}
@@ -178,7 +162,7 @@ export function MultimodalInput({
 
         {isLoading ? (
           <Button
-            className="p-2 h-fit absolute bottom-2 right-2 bg-white dark:bg-black border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black cursor-pointer rounded-none"
+            className="p-2 h-fit absolute bottom-2 right-2 bg-secondary border border-muted/40 hover:bg-muted text-foreground cursor-pointer rounded-xl transition-colors"
             onClick={(event) => {
               event.preventDefault();
               stop();
@@ -189,7 +173,7 @@ export function MultimodalInput({
           </Button>
         ) : (
           <Button
-            className="p-2 h-fit absolute bottom-2 right-2 bg-accent border-2 border-accent hover:bg-black hover:border-black text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer rounded-none"
+            className="p-2 h-fit absolute bottom-2 right-2 bg-accent border border-accent hover:bg-accent/80 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer rounded-xl"
             onClick={(event) => {
               event.preventDefault();
               submitForm();

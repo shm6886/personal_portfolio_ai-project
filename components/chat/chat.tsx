@@ -104,7 +104,7 @@ export function Chat() {
   }, [messages.length]);
 
   return (
-    <div className="flex flex-col min-w-0 h-[calc(100dvh-64px)] bg-white dark:bg-black">
+    <div className="flex flex-col min-w-0 h-[calc(100dvh-64px)] bg-background">
       <div
         ref={messagesContainerRef}
         className="flex flex-col min-w-0 gap-4 flex-1 overflow-y-scroll pt-4 px-4"
@@ -115,22 +115,22 @@ export function Chat() {
         {/* Context Banner */}
         {messages.length > 0 && isContextBannerVisible && (
           <div className="max-w-3xl mx-auto w-full">
-            <div className="border border-muted/50 rounded-2xl p-4 bg-white dark:bg-black shadow-sm">
+            <div className="border border-muted/50 rounded-2xl p-4 bg-background shadow-sm">
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-start gap-3 flex-1">
                   <div className="w-10 h-10 bg-accent flex items-center justify-center shrink-0">
                     <span className="font-display text-sm text-white">AI</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-display text-sm text-black dark:text-white">AI ASSISTANT</h3>
-                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                    <h3 className="font-display text-sm text-foreground">AI ASSISTANT</h3>
+                    <p className="text-xs text-muted-foreground mt-1">
                       I'm here to help you understand <span className="font-semibold text-accent">Haoming Sun</span>'s unique value.
                     </p>
                   </div>
                 </div>
                 <button
                   onClick={() => setIsContextBannerVisible(false)}
-                  className="text-gray-400 hover:text-black dark:hover:text-white transition-colors shrink-0 cursor-pointer"
+                  className="text-muted-foreground hover:text-foreground transition-colors shrink-0 cursor-pointer"
                   aria-label="Close"
                 >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -164,7 +164,7 @@ export function Chat() {
         />
       </div>
 
-      <div className="p-4 bg-white dark:bg-black border-t border-muted/40">
+      <div className="p-4 bg-background border-t border-muted/40">
         <form className="flex mx-auto gap-2 w-full md:max-w-3xl">
           <MultimodalInput
             chatId={chatId}

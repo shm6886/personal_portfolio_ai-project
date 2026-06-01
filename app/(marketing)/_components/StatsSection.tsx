@@ -44,8 +44,8 @@ function RingProgress({ value, max = 100, size = 140, stroke = 9, inView }: {
       />
       <defs>
         <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#7A9E7E" />
-          <stop offset="100%" stopColor="#3d6b3d" />
+          <stop offset="0%" stopColor="#E0BF6A" />
+          <stop offset="100%" stopColor="#A8892A" />
         </linearGradient>
       </defs>
     </svg>
@@ -81,7 +81,7 @@ function BarProgress({ value, max, inView }: { value: number; max: number; inVie
           <div key={i} className="flex-1 rounded-sm overflow-hidden bg-accent/10" style={{ height: `${40 + i * 7}%` }}>
             <div
               className="w-full bg-accent rounded-sm transition-none"
-              style={{ height: `${fillPct}%`, background: `linear-gradient(to top, #3d6b3d, #7A9E7E)` }}
+              style={{ height: `${fillPct}%`, background: `linear-gradient(to top, #A8892A, #E0BF6A)` }}
             />
           </div>
         )

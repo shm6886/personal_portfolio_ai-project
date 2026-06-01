@@ -11,7 +11,7 @@ type Skill = { name: string; icon: React.ReactNode }
 const SKILL_GROUPS: { label: string; color: string; skills: Skill[] }[] = [
   {
     label: "Languages",
-    color: "bg-blue-950/60 border-blue-700/40 text-blue-300",
+    color: "bg-blue-50 border-blue-200 text-blue-700",
     skills: [
       { name: "Python", icon: <SiPython /> },
       { name: "JavaScript", icon: <SiJavascript /> },
@@ -21,7 +21,7 @@ const SKILL_GROUPS: { label: string; color: string; skills: Skill[] }[] = [
   },
   {
     label: "Cloud & AI",
-    color: "bg-orange-950/60 border-orange-700/40 text-orange-300",
+    color: "bg-orange-50 border-orange-200 text-orange-700",
     skills: [
       { name: "AWS Bedrock", icon: <SiAws /> },
       { name: "AWS Lambda", icon: <SiAws /> },
@@ -43,7 +43,7 @@ const SKILL_GROUPS: { label: string; color: string; skills: Skill[] }[] = [
   },
   {
     label: "Evaluation",
-    color: "bg-purple-950/60 border-purple-700/40 text-purple-300",
+    color: "bg-purple-50 border-purple-200 text-purple-700",
     skills: [
       { name: "LLM-as-a-Judge", icon: <Scale size={14} /> },
       { name: "LangSmith", icon: <FlaskConical size={14} /> },

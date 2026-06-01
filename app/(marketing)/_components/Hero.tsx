@@ -173,7 +173,7 @@ export default function Hero() {
               className="flex gap-4 mb-8"
             >
               {[
-                { href: "https://github.com/haoming-sun", icon: <FaGithub size={22} />, label: "GitHub" },
+                { href: "https://github.com/shm6886", icon: <FaGithub size={22} />, label: "GitHub" },
                 { href: "https://www.linkedin.com/in/haoming-sun-b63820312", icon: <FaLinkedin size={22} />, label: "LinkedIn" },
               ].map(({ href, icon, label }) => (
                 <motion.a key={label} href={href} target="_blank" rel="noopener noreferrer"

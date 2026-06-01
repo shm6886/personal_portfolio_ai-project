@@ -32,17 +32,17 @@ export const PreviewMessage = ({
       >
         {/* AI Assistant Avatar - Left side */}
         {message.role === "assistant" && (
-          <div className="w-8 h-8 flex items-center justify-center bg-accent shrink-0">
+          <div className="w-8 h-8 flex items-center justify-center bg-accent shrink-0 rounded">
             <span className="font-display text-xs text-white">AI</span>
           </div>
         )}
 
         <div
           className={cn(
-            "flex flex-col gap-2 max-w-[85%] sm:max-w-[75%] p-4",
+            "flex flex-col gap-2 max-w-[85%] sm:max-w-[75%] p-4 rounded-lg",
             message.role === "user"
-              ? "bg-black text-white dark:bg-white dark:text-black border-2 border-black dark:border-white"
-              : "bg-white dark:bg-black border-2 border-black dark:border-white"
+              ? "bg-[#5C7A5C] text-white border border-[#5C7A5C]"
+              : "bg-white text-[#2D2D2D] border border-[#E0D8CC]"
           )}
         >
           {/* AI SDK v5: Use parts instead of content */}
@@ -55,8 +55,8 @@ export const PreviewMessage = ({
                       key={index}
                       className={cn(
                         message.role === "assistant"
-                          ? "text-black dark:text-white"
-                          : "text-white dark:text-black"
+                          ? "text-[#2D2D2D]"
+                          : "text-white"
                       )}
                     >
                       <Markdown
@@ -81,7 +81,7 @@ export const PreviewMessage = ({
 
         {/* User Avatar - Right side */}
         {message.role === "user" && (
-          <div className="w-8 h-8 overflow-hidden border-2 border-black dark:border-white shrink-0">
+          <div className="w-8 h-8 overflow-hidden border border-[#E0D8CC] shrink-0 rounded">
             <Image
               src={CDN_ASSETS.PROFILE_PHOTO}
               alt="User Profile"
@@ -111,8 +111,8 @@ export const ThinkingMessage = () => {
           <span className="font-display text-xs text-white">AI</span>
         </div>
 
-        <div className="p-4 bg-white dark:bg-black border-2 border-black dark:border-white">
-          <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+        <div className="p-4 bg-white border border-[#E0D8CC] rounded-lg">
+          <div className="flex items-center gap-2 text-[#2D2D2D]">
             <span className="inline-block w-2 h-2 bg-accent animate-pulse" />
             <span className="font-display text-sm uppercase">THINKING...</span>
           </div>

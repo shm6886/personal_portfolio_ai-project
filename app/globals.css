@@ -1,40 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Font Variables */
-  --font-bebas: "Bebas Neue", sans-serif;
-  --font-source-sans: "Source Sans 3", sans-serif;
+  /* Font Variables - Luxury/Natural */
+  --font-playfair: "Playfair Display", serif;
   --font-inter: "Inter", sans-serif;
+  --font-space-mono: "Space Mono", monospace;
 
-  /* Option B: Bold Black & White */
-  --background: #FFFFFF;
-  --foreground: #000000;
+  /* Cream + Earth Green */
+  --background: #FAF8F3;
+  --foreground: #2D2D2D;
   --surface: #FFFFFF;
 
   /* Card */
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  --card: 30 50% 98%;
+  --card-foreground: 30 10% 18%;
 
   /* Popover */
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  --popover: 30 50% 98%;
+  --popover-foreground: 30 10% 18%;
 
-  /* Primary (Black) */
-  --primary: 0 0% 0%;
-  --primary-foreground: 0 0% 100%;
+  /* Primary */
+  --primary: 30 25% 97%;
+  --primary-foreground: 30 10% 18%;
 
   /* Secondary */
-  --secondary: 240 4% 96%;
-  --secondary-foreground: 0 0% 0%;
+  --secondary: 30 40% 94%;
+  --secondary-foreground: 30 10% 18%;
 
   /* Muted */
-  --muted: 240 4% 96%;
-  --muted-foreground: 240 4% 46%;
+  --muted: 30 20% 86%;
+  --muted-foreground: 30 15% 54%;
 
-  /* Accent (Electric Blue) */
-  --accent: 217 91% 60%;
+  /* Accent (Earth Green) */
+  --accent: 120 20% 38%;
   --accent-foreground: 0 0% 100%;
 
   /* Destructive */
@@ -42,84 +44,59 @@
   --destructive-foreground: 0 0% 100%;
 
   /* Border & Input */
-  --border: 0 0% 0%;
-  --input: 240 6% 90%;
-  --ring: 217 91% 60%;
+  --border: 30 20% 80%;
+  --input: 30 50% 98%;
+  --ring: 120 20% 38%;
 
   /* Chart Colors */
-  --chart-1: 217 91% 60%;
-  --chart-2: 173 58% 39%;
-  --chart-3: 197 37% 24%;
-  --chart-4: 43 74% 66%;
-  --chart-5: 27 87% 67%;
+  --chart-1: 120 100% 50%;
+  --chart-2: 120 100% 45%;
+  --chart-3: 120 100% 40%;
+  --chart-4: 120 80% 50%;
+  --chart-5: 120 90% 55%;
 
-  /* Radius - Sharp corners for bold style */
-  --radius: 0px;
+  /* Radius - Rounded corners */
+  --radius: 12px;
 
   /* Sidebar */
-  --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 217 91% 60%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 4% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 0%;
-  --sidebar-ring: 217 91% 60%;
+  --sidebar-background: 0 0% 18%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 120 100% 50%;
+  --sidebar-primary-foreground: 0 0% 0%;
+  --sidebar-accent: 0 0% 25%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 120 100% 50%;
+  --sidebar-ring: 120 100% 50%;
 }
 
 .dark {
-  /* Dark Mode */
-  --background: #000000;
-  --foreground: #FFFFFF;
-  --surface: #0A0A0A;
-
-  /* Card */
-  --card: 0 0% 4%;
-  --card-foreground: 0 0% 100%;
-
-  /* Popover */
-  --popover: 0 0% 4%;
-  --popover-foreground: 0 0% 100%;
-
-  /* Primary */
-  --primary: 0 0% 100%;
-  --primary-foreground: 0 0% 0%;
-
-  /* Secondary */
-  --secondary: 0 0% 10%;
-  --secondary-foreground: 0 0% 100%;
-
-  /* Muted */
-  --muted: 0 0% 15%;
-  --muted-foreground: 0 0% 65%;
-
-  /* Accent */
-  --accent: 217 91% 60%;
+  --background: #FAF8F3;
+  --foreground: #2D2D2D;
+  --surface: #FFFFFF;
+  --card: 30 50% 98%;
+  --card-foreground: 30 10% 18%;
+  --popover: 30 50% 98%;
+  --popover-foreground: 30 10% 18%;
+  --primary: 30 25% 97%;
+  --primary-foreground: 30 10% 18%;
+  --secondary: 30 40% 94%;
+  --secondary-foreground: 30 10% 18%;
+  --muted: 30 20% 86%;
+  --muted-foreground: 30 15% 54%;
+  --accent: 120 20% 38%;
   --accent-foreground: 0 0% 100%;
-
-  /* Destructive */
-  --destructive: 0 63% 31%;
+  --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
-
-  /* Border & Input */
-  --border: 0 0% 100%;
-  --input: 0 0% 15%;
-  --ring: 217 91% 60%;
-
-  /* Sidebar */
-  --sidebar-background: 0 0% 4%;
-  --sidebar-foreground: 0 0% 100%;
-  --sidebar-primary: 217 91% 60%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 15%;
-  --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-border: 0 0% 100%;
-  --sidebar-ring: 217 91% 60%;
+  --border: 30 20% 80%;
+  --input: 30 50% 98%;
+  --ring: 120 20% 38%;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    color-scheme: light;
+    background-color: #FAF8F3;
   }
 
   * {
@@ -127,54 +104,55 @@
   }
 
   body {
-    font-family: var(--font-source-sans), var(--font-inter), sans-serif;
+    font-family: var(--font-inter), sans-serif;
     background-color: var(--background);
     color: var(--foreground);
     @apply antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-bebas), var(--font-inter), sans-serif;
-    @apply font-normal tracking-wide uppercase;
+    font-family: var(--font-playfair), serif;
+    @apply font-bold tracking-tight;
+    color: var(--foreground);
   }
 }
 
 @layer components {
-  /* Bold Card - Sharp edges, black border */
+  /* Luxury Card - Soft shadows, rounded */
   .bold-card {
-    @apply bg-white dark:bg-black border-2 border-black dark:border-white p-6;
-    @apply shadow-bold hover:shadow-bold-accent transition-shadow duration-200;
-    @apply cursor-pointer;
+    @apply bg-surface border border-muted/40 p-6 rounded-2xl;
+    @apply shadow-bold hover:shadow-bold-accent transition-all duration-300;
+    @apply cursor-pointer hover:border-accent/30;
   }
 
-  /* Bold Button */
+  /* Luxury Button */
   .bold-button {
-    @apply bg-black text-white dark:bg-white dark:text-black;
-    @apply border-2 border-black dark:border-white;
-    @apply px-8 py-4 font-display text-xl uppercase tracking-wider;
+    @apply bg-surface text-[#2D2D2D];
+    @apply border border-muted/60;
+    @apply px-7 py-3 font-display text-base font-medium tracking-wide rounded-full;
     @apply hover:bg-accent hover:border-accent hover:text-white;
-    @apply transition-colors duration-200 cursor-pointer;
+    @apply transition-all duration-300 cursor-pointer shadow-sm;
   }
 
-  /* Bold Accent Button */
+  /* Earth Green Accent Button */
   .bold-button-accent {
     @apply bg-accent text-white;
-    @apply border-2 border-accent;
-    @apply px-8 py-4 font-display text-xl uppercase tracking-wider;
-    @apply hover:bg-black hover:border-black dark:hover:bg-white dark:hover:border-white dark:hover:text-black;
-    @apply transition-colors duration-200 cursor-pointer;
+    @apply border border-accent;
+    @apply px-7 py-3 font-display text-base font-medium tracking-wide rounded-full;
+    @apply hover:bg-accent/85 hover:border-accent;
+    @apply transition-all duration-300 cursor-pointer shadow-md;
   }
 
-  /* Minimal Navbar */
+  /* Luxury Navbar */
   .minimal-nav {
-    @apply bg-white/95 dark:bg-black/95 backdrop-blur-sm;
-    @apply border-b-2 border-black dark:border-white;
+    @apply bg-background/90 backdrop-blur-md;
+    @apply border-b border-muted/40;
   }
 
   /* Glass Card (for chat) */
   .glass-card {
-    @apply bg-white/90 dark:bg-black/90 backdrop-blur-sm;
-    @apply border-2 border-black dark:border-white;
+    @apply bg-surface;
+    @apply border border-muted/40 rounded-2xl;
   }
 }
 
@@ -183,45 +161,31 @@
     text-wrap: balance;
   }
 
-  /* Accent underline */
+  /* Earth Green Underline */
   .accent-underline {
     @apply relative inline-block;
   }
 
   .accent-underline::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-full h-2 bg-accent -z-10;
+    @apply absolute bottom-0 left-0 w-full h-4 bg-accent/20 -z-10;
   }
 }
 
-/* Custom scrollbar - Bold style */
+/* Custom scrollbar - Luxury Style */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFFFFF;
-  border-left: 2px solid #000000;
+  background: #FAF8F3;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: #5C7A5C;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3B82F6;
-}
-
-/* Dark mode scrollbar */
-.dark ::-webkit-scrollbar-track {
-  background: #000000;
-  border-left: 2px solid #FFFFFF;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: #FFFFFF;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #3B82F6;
+  background: #7A9E7E;
 }

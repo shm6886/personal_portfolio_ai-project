@@ -11,45 +11,45 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Option B: Bold Black & White + Vibrant Accent
+        // Luxury/Natural Theme: Cream + Earth Green
         primary: {
-          DEFAULT: "#000000",
-          foreground: "#FFFFFF",
+          DEFAULT: "#FAF8F3",
+          foreground: "#2D2D2D",
         },
         secondary: {
-          DEFAULT: "#18181B",
-          foreground: "#FFFFFF",
+          DEFAULT: "#F5F0E8",
+          foreground: "#2D2D2D",
         },
         accent: {
-          DEFAULT: "#3B82F6", // Electric blue
+          DEFAULT: "#5C7A5C", // Muted earth green
           foreground: "#FFFFFF",
-          light: "#60A5FA",
-          dark: "#2563EB",
+          light: "#7A9E7E",
+          dark: "#4A5F4A",
         },
         background: {
-          DEFAULT: "#FFFFFF",
-          dark: "#000000",
+          DEFAULT: "#FAF8F3",
+          dark: "#FAF8F3",
         },
         surface: {
           DEFAULT: "#FFFFFF",
-          dark: "#0A0A0A",
-        },
-        muted: {
-          DEFAULT: "#F4F4F5",
-          foreground: "#71717A",
-          dark: "#18181B",
-        },
-        border: {
-          DEFAULT: "#000000",
           dark: "#FFFFFF",
         },
+        muted: {
+          DEFAULT: "#E0D8CC",
+          foreground: "#8A7D6B",
+          dark: "#E0D8CC",
+        },
+        border: {
+          DEFAULT: "#E0D8CC",
+          dark: "#E0D8CC",
+        },
         // Legacy colors for compatibility
-        "text-primary": "#000000",
-        "text-secondary": "#52525B",
-        highlight: "#3B82F6",
-        "cta-button": "#3B82F6",
-        "regular-button": "#000000",
-        contrast: "#3B82F6",
+        "text-primary": "#2D2D2D",
+        "text-secondary": "#6B6B6B",
+        highlight: "#5C7A5C",
+        "cta-button": "#5C7A5C",
+        "regular-button": "#FFFFFF",
+        contrast: "#5C7A5C",
         // shadcn/ui compatibility
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -68,15 +68,16 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-bebas)", "sans-serif"],
-        body: ["var(--font-source-sans)", "sans-serif"],
-        heading: ["var(--font-bebas)", "sans-serif"],
+        display: ["var(--font-playfair)", "serif"],
+        body: ["var(--font-inter)", "sans-serif"],
+        heading: ["var(--font-playfair)", "serif"],
         inter: ["var(--font-inter)", "sans-serif"],
+        mono: ["var(--font-space-mono)", "monospace"],
       },
       fontSize: {
-        "display-xl": ["clamp(4rem, 15vw, 12rem)", { lineHeight: "0.9", letterSpacing: "-0.02em" }],
-        "display-lg": ["clamp(3rem, 10vw, 8rem)", { lineHeight: "0.95", letterSpacing: "-0.02em" }],
-        "display-md": ["clamp(2rem, 6vw, 4rem)", { lineHeight: "1", letterSpacing: "-0.01em" }],
+        "display-xl": ["clamp(2.5rem, 7vw, 6rem)", { lineHeight: "0.95", letterSpacing: "-0.01em" }],
+        "display-lg": ["clamp(2rem, 8vw, 6rem)", { lineHeight: "1", letterSpacing: "-0.005em" }],
+        "display-md": ["clamp(1.5rem, 4vw, 3rem)", { lineHeight: "1.2", letterSpacing: "0" }],
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",
@@ -109,9 +110,9 @@ const config: Config = {
         none: "0px",
       },
       boxShadow: {
-        "bold": "8px 8px 0px #000000",
-        "bold-sm": "4px 4px 0px #000000",
-        "bold-accent": "8px 8px 0px #3B82F6",
+        "bold": "0 4px 20px rgba(0, 0, 0, 0.08)",
+        "bold-sm": "0 2px 10px rgba(0, 0, 0, 0.06)",
+        "bold-accent": "0 4px 15px rgba(92, 122, 92, 0.1)",
       },
     },
   },

@@ -1,6 +1,6 @@
 export const METADATA = {
-  TITLE: "John Doe - Software Engineer & Cloud Architect",
-  DESCRIPTION: "Personal website and portfolio of John Doe",
+  TITLE: "Haoming Sun - AI Agent Developer",
+  DESCRIPTION: "Personal website and portfolio of Haoming Sun, AI Agent Developer",
   AI_ASSISTANT_NAME: "AI Assistant",
 } as const;
 

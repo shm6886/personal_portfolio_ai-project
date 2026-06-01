@@ -1,10 +1,10 @@
 export const DEFAULT_SEO_CONFIG = {
-  siteName: "John Doe Portfolio",
+  siteName: "Haoming Sun Portfolio",
   author: {
-    name: "John Doe",
+    name: "Haoming Sun",
     url: "https://johndoe.me",
   },
-  creator: "John Doe",
+  creator: "Haoming Sun",
   locale: "en_US",
   image: "/images/profile.png",
   imageWidth: 192,
@@ -13,12 +13,12 @@ export const DEFAULT_SEO_CONFIG = {
 }
 
 export const COMMON_KEYWORDS = [
-  "John Doe",
-  "Solution Architect",
-  "Full Stack Developer",
-  "AWS",
+  "Haoming Sun",
+  "AI Agent Developer",
+  "LLM",
+  "AWS Bedrock",
+  "LangChain",
   "Python",
-  "TypeScript",
-  "Next.js",
-  "System Design",
+  "RAG",
+  "AI Evaluation",
 ]

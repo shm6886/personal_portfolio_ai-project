@@ -4,23 +4,22 @@ import HomePageContent from "./HomePageContent"
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateSEOMetadata({
-    title: "John Doe - Solution Architect & Builder",
-    description: "Solution Architect and Open Source Developer with 150+ Python libraries, 10M+ monthly downloads, and 600+ repositories. Specialized in cloud architecture, AI, and enterprise solutions.",
+    title: "Haoming Sun - AI Agent Developer",
+    description: "AI Agent Developer building production-grade LLM systems with focus on evaluation, reliability, and observability. 5,000+ DAU, 93.5% decision accuracy.",
     keywords: [
-      "Open Source Developer",
-      "Python Libraries",
-      "Cloud Architecture",
-      "Enterprise Solutions",
-      "Automation",
-      "Software Engineering",
-      "Tech Leadership",
+      "AI Agent Developer",
+      "LLM",
+      "AWS Bedrock",
+      "LangChain",
+      "RAG",
+      "AI Evaluation",
+      "Production AI",
     ],
-    url: "https://johndoe.me",
-    ogTitle: "John Doe - Solution Architect & Open Source Builder",
-    ogDescription: "Experienced Solution Architect and prolific Open Source Developer. Creator of 160+ Python libraries with 10M+ monthly downloads. Specialized in cloud architecture, automation, and enterprise solutions.",
-    imageAlt: "John Doe Profile Photo - Solution Architect & Builder",
-    twitterTitle: "John Doe - Solution Architect & Builder",
-    twitterDescription: "Solution Architect and Open Source Developer with 160+ Python libraries, 10M+ monthly downloads, and 600+ repositories. Specialized in cloud architecture, AI, and enterprise solutions.",
+    ogTitle: "Haoming Sun - AI Agent Developer",
+    ogDescription: "AI Agent Developer building production-grade LLM systems. Shipped agentic app serving 5,000+ DAU with 93.5% decision accuracy.",
+    imageAlt: "Haoming Sun - AI Agent Developer",
+    twitterTitle: "Haoming Sun - AI Agent Developer",
+    twitterDescription: "AI Agent Developer building production-grade LLM systems with focus on evaluation, reliability, and observability.",
   })
 }
 

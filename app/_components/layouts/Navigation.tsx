@@ -31,7 +31,7 @@ export default function Navigation({ items = DEFAULT_NAV_ITEMS }: NavigationProp
             href="/"
             className="font-display text-2xl text-black dark:text-white hover:text-accent transition-colors"
           >
-            JD
+            HS
           </Link>
 
           {/* Desktop Navigation */}
@@ -45,7 +45,7 @@ export default function Navigation({ items = DEFAULT_NAV_ITEMS }: NavigationProp
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="font-display text-lg px-6 py-2 bg-accent text-white border-2 border-accent hover:bg-black hover:border-black hover:text-white dark:hover:bg-white dark:hover:border-white dark:hover:text-black transition-colors cursor-pointer"
+                    className="font-display text-base px-6 py-2 bg-accent text-white rounded-full hover:bg-accent/80 transition-colors cursor-pointer shadow-sm"
                   >
                     CHAT
                   </Link>
@@ -57,10 +57,10 @@ export default function Navigation({ items = DEFAULT_NAV_ITEMS }: NavigationProp
                   key={item.href}
                   href={item.href}
                   className={`
-                    font-display text-lg uppercase tracking-wider transition-colors cursor-pointer
+                    font-display text-base tracking-wide transition-all cursor-pointer px-4 py-1.5 rounded-full
                     ${active
-                      ? "text-accent"
-                      : "text-black dark:text-white hover:text-accent"
+                      ? "text-accent bg-accent/10"
+                      : "text-black dark:text-white hover:text-accent hover:bg-muted/60"
                     }
                   `}
                 >
@@ -95,7 +95,7 @@ export default function Navigation({ items = DEFAULT_NAV_ITEMS }: NavigationProp
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="block font-display text-xl py-3 px-4 bg-accent text-white text-center cursor-pointer"
+                      className="block font-display text-xl py-3 px-4 bg-accent text-white text-center cursor-pointer rounded-full mx-2"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       CHAT
@@ -108,7 +108,7 @@ export default function Navigation({ items = DEFAULT_NAV_ITEMS }: NavigationProp
                     key={item.href}
                     href={item.href}
                     className={`
-                      block font-display text-xl py-3 px-4 uppercase tracking-wider transition-colors cursor-pointer
+                      block font-display text-xl py-3 px-4 tracking-wide transition-colors cursor-pointer rounded-full
                       ${active
                         ? "text-accent"
                         : "text-black dark:text-white hover:text-accent"

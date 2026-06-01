@@ -115,7 +115,7 @@ export function Chat() {
         {/* Context Banner */}
         {messages.length > 0 && isContextBannerVisible && (
           <div className="max-w-3xl mx-auto w-full">
-            <div className="border-2 border-black dark:border-white p-4 bg-white dark:bg-black">
+            <div className="border border-muted/50 rounded-2xl p-4 bg-white dark:bg-black shadow-sm">
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-start gap-3 flex-1">
                   <div className="w-10 h-10 bg-accent flex items-center justify-center shrink-0">
@@ -124,7 +124,7 @@ export function Chat() {
                   <div className="flex-1">
                     <h3 className="font-display text-sm text-black dark:text-white">AI ASSISTANT</h3>
                     <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-                      I'm here to help you understand <span className="font-semibold text-accent">John Doe</span>'s unique value.
+                      I'm here to help you understand <span className="font-semibold text-accent">Haoming Sun</span>'s unique value.
                     </p>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ export function Chat() {
         />
       </div>
 
-      <div className="p-4 bg-white dark:bg-black border-t-2 border-black dark:border-white">
+      <div className="p-4 bg-white dark:bg-black border-t border-muted/40">
         <form className="flex mx-auto gap-2 w-full md:max-w-3xl">
           <MultimodalInput
             chatId={chatId}

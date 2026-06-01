@@ -101,11 +101,11 @@ export default function Hero() {
           {/* Left Side */}
           <div>
             {/* Animated name letters */}
-            <h1 className="font-display text-display-xl text-foreground leading-none mb-4 italic">
+            <h1 className="font-display text-display-xl text-black leading-none mb-4 italic">
               <span className="flex flex-wrap">
                 {NAME_CHARS_1.map((char, i) => (
                   <motion.span key={i} custom={i} variants={letterVariants} initial="hidden" animate="visible"
-                    whileHover={{ scale: 1.25, color: "#5C7A5C", transition: { duration: 0.15 } }}
+                    whileHover={{ scale: 1.25, color: "#A8892A", transition: { duration: 0.15 } }}
                     className="inline-block"
                   >
                     {char === " " ? "\u00A0" : char}
@@ -115,7 +115,7 @@ export default function Hero() {
               <span className="accent-underline flex flex-wrap">
                 {NAME_CHARS_2.map((char, i) => (
                   <motion.span key={i} custom={NAME_CHARS_1.length + i} variants={letterVariants} initial="hidden" animate="visible"
-                    whileHover={{ scale: 1.25, color: "#5C7A5C", transition: { duration: 0.15 } }}
+                    whileHover={{ scale: 1.25, color: "#A8892A", transition: { duration: 0.15 } }}
                     className="inline-block"
                   >
                     {char === " " ? "\u00A0" : char}

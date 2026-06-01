@@ -5,98 +5,98 @@
 @tailwind utilities;
 
 :root {
-  /* Font Variables - Luxury/Natural */
+  /* Font Variables */
   --font-playfair: "Playfair Display", serif;
   --font-inter: "Inter", sans-serif;
   --font-space-mono: "Space Mono", monospace;
 
-  /* Cream + Earth Green */
-  --background: #FAF8F3;
-  --foreground: #2D2D2D;
-  --surface: #FFFFFF;
+  /* Deep Slate + Gold */
+  --background: #0F1117;
+  --foreground: #F0EDE6;
+  --surface: #1A1D27;
 
   /* Card */
-  --card: 30 50% 98%;
-  --card-foreground: 30 10% 18%;
+  --card: 228 21% 13%;
+  --card-foreground: 38 33% 92%;
 
   /* Popover */
-  --popover: 30 50% 98%;
-  --popover-foreground: 30 10% 18%;
+  --popover: 228 21% 13%;
+  --popover-foreground: 38 33% 92%;
 
   /* Primary */
-  --primary: 30 25% 97%;
-  --primary-foreground: 30 10% 18%;
+  --primary: 228 21% 16%;
+  --primary-foreground: 38 33% 92%;
 
-  /* Secondary */
-  --secondary: 30 40% 94%;
-  --secondary-foreground: 30 10% 18%;
+  /* Secondary (card backgrounds) */
+  --secondary: 228 20% 14%;
+  --secondary-foreground: 38 33% 92%;
 
   /* Muted */
-  --muted: 30 20% 86%;
-  --muted-foreground: 30 15% 54%;
+  --muted: 228 18% 22%;
+  --muted-foreground: 228 12% 58%;
 
-  /* Accent (Earth Green) */
-  --accent: 120 20% 38%;
-  --accent-foreground: 0 0% 100%;
+  /* Accent (Warm Gold) */
+  --accent: 43 52% 54%;
+  --accent-foreground: 228 21% 7%;
 
   /* Destructive */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
   /* Border & Input */
-  --border: 30 20% 80%;
-  --input: 30 50% 98%;
-  --ring: 120 20% 38%;
+  --border: 228 18% 20%;
+  --input: 228 21% 13%;
+  --ring: 43 52% 54%;
 
   /* Chart Colors */
-  --chart-1: 120 100% 50%;
-  --chart-2: 120 100% 45%;
-  --chart-3: 120 100% 40%;
-  --chart-4: 120 80% 50%;
-  --chart-5: 120 90% 55%;
+  --chart-1: 43 52% 54%;
+  --chart-2: 43 52% 45%;
+  --chart-3: 43 52% 38%;
+  --chart-4: 43 40% 54%;
+  --chart-5: 43 60% 60%;
 
-  /* Radius - Rounded corners */
+  /* Radius */
   --radius: 12px;
 
   /* Sidebar */
-  --sidebar-background: 0 0% 18%;
-  --sidebar-foreground: 0 0% 100%;
-  --sidebar-primary: 120 100% 50%;
-  --sidebar-primary-foreground: 0 0% 0%;
-  --sidebar-accent: 0 0% 25%;
-  --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-border: 120 100% 50%;
-  --sidebar-ring: 120 100% 50%;
+  --sidebar-background: 228 21% 10%;
+  --sidebar-foreground: 38 33% 92%;
+  --sidebar-primary: 43 52% 54%;
+  --sidebar-primary-foreground: 228 21% 7%;
+  --sidebar-accent: 228 18% 18%;
+  --sidebar-accent-foreground: 38 33% 92%;
+  --sidebar-border: 228 18% 20%;
+  --sidebar-ring: 43 52% 54%;
 }
 
 .dark {
-  --background: #FAF8F3;
-  --foreground: #2D2D2D;
-  --surface: #FFFFFF;
-  --card: 30 50% 98%;
-  --card-foreground: 30 10% 18%;
-  --popover: 30 50% 98%;
-  --popover-foreground: 30 10% 18%;
-  --primary: 30 25% 97%;
-  --primary-foreground: 30 10% 18%;
-  --secondary: 30 40% 94%;
-  --secondary-foreground: 30 10% 18%;
-  --muted: 30 20% 86%;
-  --muted-foreground: 30 15% 54%;
-  --accent: 120 20% 38%;
-  --accent-foreground: 0 0% 100%;
+  --background: #0F1117;
+  --foreground: #F0EDE6;
+  --surface: #1A1D27;
+  --card: 228 21% 13%;
+  --card-foreground: 38 33% 92%;
+  --popover: 228 21% 13%;
+  --popover-foreground: 38 33% 92%;
+  --primary: 228 21% 16%;
+  --primary-foreground: 38 33% 92%;
+  --secondary: 228 20% 14%;
+  --secondary-foreground: 38 33% 92%;
+  --muted: 228 18% 22%;
+  --muted-foreground: 228 12% 58%;
+  --accent: 43 52% 54%;
+  --accent-foreground: 228 21% 7%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
-  --border: 30 20% 80%;
-  --input: 30 50% 98%;
-  --ring: 120 20% 38%;
+  --border: 228 18% 20%;
+  --input: 228 21% 13%;
+  --ring: 43 52% 54%;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: light;
-    background-color: #FAF8F3;
+    color-scheme: dark;
+    background-color: #0F1117;
   }
 
   * {
@@ -178,14 +178,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAF8F3;
+  background: #0F1117;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5C7A5C;
+  background: #C9A84C;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7A9E7E;
+  background: #E0BF6A;
 }

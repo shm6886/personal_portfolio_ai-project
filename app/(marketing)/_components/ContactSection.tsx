@@ -16,7 +16,7 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="font-display text-display-md italic text-black dark:text-white mb-8"
+          className="font-display text-display-md italic text-foreground mb-8"
         >
           Let's Connect
         </motion.h2>

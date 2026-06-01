@@ -29,7 +29,7 @@ export default function Navigation({ items = DEFAULT_NAV_ITEMS }: NavigationProp
           {/* Logo / Brand */}
           <Link
             href="/"
-            className="font-display text-2xl text-black dark:text-white hover:text-accent transition-colors"
+            className="font-display text-2xl text-foreground hover:text-accent transition-colors"
           >
             HS
           </Link>
@@ -60,7 +60,7 @@ export default function Navigation({ items = DEFAULT_NAV_ITEMS }: NavigationProp
                     font-display text-base tracking-wide transition-all cursor-pointer px-4 py-1.5 rounded-full
                     ${active
                       ? "text-accent bg-accent/10"
-                      : "text-black dark:text-white hover:text-accent hover:bg-muted/60"
+                      : "text-foreground hover:text-accent hover:bg-muted/60"
                     }
                   `}
                 >
@@ -74,7 +74,7 @@ export default function Navigation({ items = DEFAULT_NAV_ITEMS }: NavigationProp
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-black dark:text-white hover:text-accent transition-colors cursor-pointer"
+              className="p-2 text-foreground hover:text-accent transition-colors cursor-pointer"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -84,7 +84,7 @@ export default function Navigation({ items = DEFAULT_NAV_ITEMS }: NavigationProp
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t-2 border-black dark:border-white">
+          <div className="md:hidden border-t border-muted/40">
             <div className="py-4 space-y-2">
               {items.map((item) => {
                 const active = isActive(item.href)
@@ -111,7 +111,7 @@ export default function Navigation({ items = DEFAULT_NAV_ITEMS }: NavigationProp
                       block font-display text-xl py-3 px-4 tracking-wide transition-colors cursor-pointer rounded-full
                       ${active
                         ? "text-accent"
-                        : "text-black dark:text-white hover:text-accent"
+                        : "text-foreground hover:text-accent"
                       }
                     `}
                     onClick={() => setIsMenuOpen(false)}

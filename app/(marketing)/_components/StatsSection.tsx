@@ -123,7 +123,7 @@ export default function StatsSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="font-display text-display-md italic text-black mb-12"
+          className="font-display text-display-md italic text-foreground mb-12"
         >
           Achievements
         </motion.h2>
@@ -149,7 +149,7 @@ export default function StatsSection() {
                 {dau >= 1000 ? Math.round(dau).toLocaleString("en-US") : Math.round(dau)}
                 <span className="text-3xl">+</span>
               </div>
-              <div className="text-sm text-gray-500 font-body mt-2">TalkMeUp AI tutoring platform</div>
+              <div className="text-sm text-muted-foreground font-body mt-2">TalkMeUp AI tutoring platform</div>
             </div>
           </motion.div>
 
@@ -174,7 +174,7 @@ export default function StatsSection() {
             </div>
 
             <div>
-              <div className="text-sm text-gray-500 font-body">Dental prior auth · EasyScaleCloud</div>
+              <div className="text-sm text-muted-foreground font-body">Dental prior auth · EasyScaleCloud</div>
             </div>
           </motion.div>
 
@@ -199,7 +199,7 @@ export default function StatsSection() {
             </div>
 
             <div>
-              <div className="text-sm text-gray-500 font-body">EasyScaleCloud</div>
+              <div className="text-sm text-muted-foreground font-body">EasyScaleCloud</div>
             </div>
           </motion.div>
 

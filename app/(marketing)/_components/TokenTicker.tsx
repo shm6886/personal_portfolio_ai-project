@@ -46,7 +46,7 @@ export default function TokenTicker() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="font-display text-display-md italic text-black mb-12"
+          className="font-display text-display-md italic text-foreground mb-12"
         >
           By the Numbers
         </motion.h2>

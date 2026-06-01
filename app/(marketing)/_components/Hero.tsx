@@ -101,7 +101,7 @@ export default function Hero() {
           {/* Left Side */}
           <div>
             {/* Animated name letters */}
-            <h1 className="font-display text-display-xl text-black leading-none mb-4 italic">
+            <h1 className="font-display text-display-xl text-foreground leading-none mb-4 italic">
               <span className="flex flex-wrap">
                 {NAME_CHARS_1.map((char, i) => (
                   <motion.span key={i} custom={i} variants={letterVariants} initial="hidden" animate="visible"
@@ -149,7 +149,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.4 }}
-                  className="text-base sm:text-lg text-gray-600 max-w-md leading-relaxed"
+                  className="text-base sm:text-lg text-muted-foreground max-w-md leading-relaxed"
                 >
                   {ROTATING_PHRASES[phraseIndex]}
                 </motion.p>
@@ -207,7 +207,7 @@ export default function Hero() {
               <motion.div
                 animate={{ rotateX: tilt.x, rotateY: tilt.y }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="relative w-64 h-80 sm:w-72 sm:h-[22rem] lg:w-80 lg:h-[26rem] bg-white overflow-hidden shadow-bold rounded-2xl group"
+                className="relative w-64 h-80 sm:w-72 sm:h-[22rem] lg:w-80 lg:h-[26rem] bg-surface overflow-hidden shadow-bold rounded-2xl group"
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <motion.div
@@ -249,13 +249,13 @@ export default function Hero() {
           <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}>
             <Link
               href="/chat"
-              className="group flex items-center justify-between w-full p-6 border border-muted/50 hover:border-accent/40 hover:shadow-bold-accent bg-white transition-all cursor-pointer rounded-2xl shadow-sm"
+              className="group flex items-center justify-between w-full p-6 border border-muted/50 hover:border-accent/40 hover:shadow-bold-accent bg-surface transition-all cursor-pointer rounded-2xl shadow-sm"
             >
               <div>
-                <h3 className="font-display text-2xl sm:text-3xl text-black italic">
+                <h3 className="font-display text-2xl sm:text-3xl text-foreground italic">
                   Chat with Haoming
                 </h3>
-                <p className="text-gray-500 text-sm sm:text-base mt-1">
+                <p className="text-muted-foreground text-sm sm:text-base mt-1">
                   Ask about AI agents, evaluation frameworks, production systems, and technical depth
                 </p>
               </div>
@@ -263,7 +263,7 @@ export default function Hero() {
                 whileHover={{ x: 6, scale: 1.2 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
               >
-                <ArrowRight className="w-7 h-7 text-black flex-shrink-0 ml-4" />
+                <ArrowRight className="w-7 h-7 text-foreground flex-shrink-0 ml-4" />
               </motion.div>
             </Link>
           </motion.div>

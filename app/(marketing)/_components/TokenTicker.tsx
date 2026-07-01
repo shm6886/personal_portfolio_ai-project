@@ -3,10 +3,12 @@
 import { useEffect, useRef, useState } from "react"
 import { motion, useInView } from "framer-motion"
 
-const TOTAL_TOKENS = 1_000_000_000
+const TOTAL_TOKENS = 1_500_000_000
 
 const PROJECTS = [
-  { name: "EasyScaleCloud · Dental Auth Agent", tokens: "~1.0B", model: "Claude 3.5 Sonnet", bar: 1.0 },
+  { name: "EasyScaleCloud · Dental Auth Agent", tokens: "~1.0B", model: "Claude 3.5 Sonnet", bar: 0.67 },
+  { name: "EasyScaleCloud · SMB Loan BI Agent", tokens: "~340M", model: "Claude 3.5 Sonnet", bar: 0.23 },
+  { name: "EasyScaleCloud · OB/GYN Scheduler",  tokens: "~160M", model: "Claude 3.5 Sonnet", bar: 0.11 },
 ]
 
 function useCount(target: number, inView: boolean, duration = 2200) {
@@ -79,7 +81,7 @@ export default function TokenTicker() {
                 </div>
 
                 <p className="text-sm text-muted-foreground font-body mt-3">
-                  ≈ 1 billion tokens across production AI systems
+                  ≈ 1.5 billion tokens across 3 production AI systems
                 </p>
               </div>
 
@@ -132,7 +134,7 @@ export default function TokenTicker() {
               {/* Divider + total */}
               <div className="border-t border-muted/40 pt-4 flex items-center justify-between">
                 <span className="text-xs font-body uppercase tracking-widest text-muted-foreground">Total</span>
-                <span className="font-display italic text-accent text-base">~1.0B tokens</span>
+                <span className="font-display italic text-accent text-base">~1.5B tokens</span>
               </div>
             </div>
 

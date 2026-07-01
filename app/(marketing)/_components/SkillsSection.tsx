@@ -2,9 +2,9 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { SiPython, SiJavascript, SiFastapi, SiNextdotjs, SiPostgresql, SiAmazonwebservices as SiAws, SiLangchain } from "react-icons/si"
+import { SiPython, SiJavascript, SiFastapi, SiNextdotjs, SiPostgresql, SiAmazonwebservices as SiAws } from "react-icons/si"
 import { FaJava, FaDatabase } from "react-icons/fa"
-import { Cloud, Cpu, Search, FlaskConical, Scale, MessageSquare, Sparkles, Network, CircleDot } from "lucide-react"
+import { Cloud, Cpu, Scale, MessageSquare, Sparkles, Network } from "lucide-react"
 
 type Skill = { name: string; icon: React.ReactNode }
 
@@ -34,11 +34,9 @@ const SKILL_GROUPS: { label: string; color: string; skills: Skill[] }[] = [
     label: "Frameworks",
     color: "bg-accent/10 border-accent/30 text-accent",
     skills: [
-      { name: "LangChain", icon: <SiLangchain /> },
       { name: "Strands Agents", icon: <Network size={14} /> },
       { name: "FastAPI", icon: <SiFastapi /> },
       { name: "Next.js", icon: <SiNextdotjs /> },
-      { name: "RAG", icon: <Search size={14} /> },
     ],
   },
   {
@@ -46,8 +44,6 @@ const SKILL_GROUPS: { label: string; color: string; skills: Skill[] }[] = [
     color: "bg-purple-50 border-purple-200 text-purple-700",
     skills: [
       { name: "LLM-as-a-Judge", icon: <Scale size={14} /> },
-      { name: "LangSmith", icon: <FlaskConical size={14} /> },
-      { name: "Chroma", icon: <CircleDot size={14} /> },
       { name: "PostgreSQL RDS", icon: <SiPostgresql /> },
       { name: "Prompt Optimization", icon: <MessageSquare size={14} /> },
     ],

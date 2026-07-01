@@ -112,7 +112,7 @@ export default function StatsSection() {
   const sectionRef = useRef(null)
   const inView = useInView(sectionRef, { once: true, margin: "-60px" })
 
-  const dau = useCount(5000, inView)
+  const dau = useCount(2000000, inView)
   const acc = useCount(93.5, inView)
   const auto = useCount(60, inView)
 
@@ -140,16 +140,16 @@ export default function StatsSection() {
           >
             <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent/60 via-accent to-accent/30 rounded-t-2xl" />
 
-            <div className="text-xs font-body uppercase tracking-widest text-accent/70">Daily Active Users</div>
+            <div className="text-xs font-body uppercase tracking-widest text-accent/70">Annual Requests</div>
 
-            <BarProgress value={5000} max={5000} inView={inView} />
+            <BarProgress value={2000000} max={2000000} inView={inView} />
 
             <div>
               <div className="font-display text-5xl sm:text-6xl text-accent italic leading-none">
-                {dau >= 1000 ? Math.round(dau).toLocaleString("en-US") : Math.round(dau)}
+                {dau >= 1000000 ? (dau / 1000000).toFixed(1).replace(".0","") + "M" : dau >= 1000 ? Math.round(dau).toLocaleString("en-US") : Math.round(dau)}
                 <span className="text-3xl">+</span>
               </div>
-              <div className="text-sm text-muted-foreground font-body mt-2">TalkMeUp AI tutoring platform</div>
+              <div className="text-sm text-muted-foreground font-body mt-2">Dental prior auth · EasyScaleCloud</div>
             </div>
           </motion.div>
 

@@ -4,8 +4,8 @@ import { AchievementStat } from "@/types"
 
 export const achievementStats: AchievementStat[] = [
   {
-    number: "5,000+",
-    description: "Daily Active Users Served",
+    number: "2M+",
+    description: "Annual Requests Processed",
     color: "text-primary",
     borderColor: "border-primary",
     glowColor: "shadow-primary/20",

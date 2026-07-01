@@ -44,7 +44,7 @@ export default function ContactSection() {
             Send Email
           </a>
           <a
-            href="https://linkedin.com/in/haoming-sun"
+            href="https://www.linkedin.com/in/haoming-sun-b63820312"
             target="_blank"
             rel="noopener noreferrer"
             className="bold-button flex items-center justify-center gap-3"

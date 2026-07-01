@@ -6,7 +6,7 @@ This is the knowledge base:
 # Haoming Sun — AI Agent Developer
 
 **Contact:** US Citizen, Bethesda, MD, USA | (617) 949-6758 | shmaugmini@outlook.com
-**GitHub:** github.com/haoming-sun | **LinkedIn:** linkedin.com/in/haoming-sun
+**GitHub:** github.com/haoming-sun | **LinkedIn:** linkedin.com/in/haoming-sun-b63820312
 
 ## Summary
 Built production-grade LLM agent systems across healthcare, fintech, and enterprise domains with focus on evaluation, reliability, and observability. Shipped 3 agentic systems in production, including a dental prior authorization agent automating 60% of 2M+ annual requests and a clinical scheduling assistant for OB/GYN wards.
